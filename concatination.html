@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .card {
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      .card h1 {
+        color: #333;
+        font-size: 24px;
+      }
+
+      .card label {
+        display: inline-block;
+        width: 180px;
+        margin-bottom: 10px;
+      }
+
+      .card input {
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+      }
+
+      .card button {
+        padding: 8px 15px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .card button:hover {
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-condainer">
+      <div class="card">
+        <h1>Concatination</h1>
+        <label>Enter First Name :</label>
+        <input
+          type="text"
+          placeholder="Enter first name"
+          id="firstName"
+        /><br />
+        <label>Enter Middle Name :</label>
+        <input
+          type="text"
+          placeholder="Enter middle name"
+          id="middleName"
+        /><br />
+        <label>Enter Last Name :</label>
+        <input type="text" placeholder="Enter last name" id="lastName" /><br />
+        <label>Full Name :</label>
+        <input type="text" id="fullNameResult" /><br />
+        <button onclick="displayFullName()">Display Full Name</button>
+      </div>
+      <div class="card">
+        <h1>Add Two Values</h1>
+
+        <label>Enter A :</label>
+        <input type="text" placeholder="Enter A" id="valueA" /><br />
+
+        <label>Enter B :</label>
+        <input type="text" placeholder="Enter B" id="valueB" /><br />
+
+        <label>Result :</label>
+        <input type="text" id="additionResult" /><br />
+
+        <button onclick="addValues()">Add Values</button>
+      </div>
+      <div class="card">
+        <h1>Arithmetic Operations</h1>
+
+        <label>Enter A :</label>
+        <input type="text" placeholder="Enter A" id="arithmeticA" /><br />
+
+        <label>Enter B :</label>
+        <input type="text" placeholder="Enter B" id="arithmeticB" /><br />
+
+        <label>Subtraction :</label>
+        <input type="text" id="subtractionResult" /><br />
+
+        <label>Multiplication :</label>
+        <input type="text" id="multiplicationResult" /><br />
+
+        <label>Division :</label>
+        <input type="text" id="divisionResult" /><br />
+
+        <button onclick="calculateOperations()">Calculate</button>
+      </div>
+      <div class="card">
+        <h1>Check Data Type</h1>
+
+        <label>Enter Value :</label>
+        <input type="text" placeholder="Enter value" id="dataValue" /><br />
+
+        <label>Original Data Type :</label>
+        <input type="text" id="originalType" /><br />
+
+        <label>After parseInt :</label>
+        <input type="text" id="convertedType" /><br />
+
+        <button onclick="checkDataType()">Check Data Type</button>
+      </div>
+      <div class="card">
+        <h1>Number Conversion</h1>
+
+        <label>Enter Number :</label>
+        <input
+          type="text"
+          placeholder="Enter number"
+          id="convertNumber"
+        /><br />
+
+        <label>ParseInt :</label>
+        <input type="text" id="parseIntResult" /><br />
+
+        <label>ParseFloat :</label>
+        <input type="text" id="parseFloatResult" /><br />
+
+        <label>Number :</label>
+        <input type="text" id="numberResult" /><br />
+
+        <button onclick="convertNumberType()">Convert Number</button>
+      </div>
+      <div class="card">
+        <h1>Number Conversion</h1>
+
+        <label>Enter Value :</label>
+        <input type="text" placeholder="Enter value" id="valueConvert" /><br />
+
+        <label>Number :</label>
+        <input type="text" id="numberResult2" /><br />
+
+        <label>ParseInt :</label>
+        <input type="text" id="parseIntResult2" /><br />
+
+        <label>ParseFloat :</label>
+        <input type="text" id="parseFloatResult2" /><br />
+
+        <button onclick="convertValue()">Convert</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="concat.js"></script>
+  </body>
+</html>

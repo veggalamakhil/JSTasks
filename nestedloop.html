@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Pattern Practice</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1565c0;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #90caf9;
+            box-shadow: 0 3px 8px #b0bec5;
+        }
+
+        .card h2 {
+            color: #1976d2;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        button {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0d47a1;
+        }
+
+        .result {
+            background-color: #e3f2fd;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 5px;
+            min-height: 20px;
+            color: #333;
+            white-space: pre;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Pattern Practice</h1>
+
+    <p class="subtitle">
+        Practice Nested Loops and Different Patterns
+    </p>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>1. Square Pattern</h2>
+            <p>Print a 5 × 5 square of stars.</p>
+            <button onclick="squarePattern()">Show Result</button>
+            <div class="result" id="result1"></div>
+        </div>
+
+        <div class="card">
+            <h2>2. Right Triangle</h2>
+            <p>Print a growing right-angle triangle.</p>
+            <button onclick="rightTriangle()">Show Result</button>
+            <div class="result" id="result2"></div>
+        </div>
+
+        <div class="card">
+            <h2>3. Inverted Triangle</h2>
+            <p>Print a shrinking right-angle triangle.</p>
+            <button onclick="invertedTriangle()">Show Result</button>
+            <div class="result" id="result3"></div>
+        </div>
+
+        <div class="card">
+            <h2>4. Pyramid Pattern</h2>
+            <p>Print a centered pyramid of stars.</p>
+            <button onclick="pyramidPattern()">Show Result</button>
+            <div class="result" id="result4"></div>
+        </div>
+
+        <div class="card">
+            <h2>5. Number Pyramid</h2>
+            <p>Print increasing numbers on each row.</p>
+            <button onclick="numberPyramid()">Show Result</button>
+            <div class="result" id="result5"></div>
+        </div>
+
+        <div class="card">
+            <h2>6. Diamond Pattern</h2>
+            <p>Print a diamond made using stars.</p>
+            <button onclick="diamondPattern()">Show Result</button>
+            <div class="result" id="result6"></div>
+        </div>
+
+        <div class="card">
+            <h2>7. Floyd's Triangle</h2>
+            <p>Print consecutive numbers in a triangle.</p>
+            <button onclick="floydTriangle()">Show Result</button>
+            <div class="result" id="result7"></div>
+        </div>
+
+        <div class="card">
+            <h2>8. Pascal's Triangle</h2>
+            <p>Print the first five rows of Pascal's triangle.</p>
+            <button onclick="pascalTriangle()">Show Result</button>
+            <div class="result" id="result8"></div>
+        </div>
+
+    </div>
+
+    <script>
+
+        function squarePattern() {
+
+            var pattern = "";
+
+            for (var row = 1; row <= 5; row++) {
+
+                for (var column = 1; column <= 5; column++) {
+                    pattern += "* ";
+                }
+
+                pattern += "\n";
+            }
+
+            document.getElementById("result1").innerText = pattern;
+        }
+
+
+        function rightTriangle() {
+
+            var pattern = "";
+
+            for (var row = 1; row <= 5; row++) {
+
+                for (var column = 1; column <= row; column++) {
+                    pattern += "* ";
+                }
+
+                pattern += "\n";
+            }
+
+            document.getElementById("result2").innerText = pattern;
+        }
+
+
+        function invertedTriangle() {
+
+            var pattern = "";
+
+            for (var row = 5; row >= 1; row--) {
+
+                for (var column = 1; column <= row; column++) {
+                    pattern += "* ";
+                }
+
+                pattern += "\n";
+            }
+
+            document.getElementById("result3").innerText = pattern;
+        }
+
+
+        function pyramidPattern() {
+
+            var pattern = "";
+
+            for (var row = 1; row <= 5; row++) {
+
+                for (var space = 1; space <= 5 - row; space++) {
+                    pattern += " ";
+                }
+
+                for (var column = 1; column <= row; column++) {
+                    pattern += "* ";
+                }
+
+                pattern += "\n";
+            }
+
+            document.getElementById("result4").innerText = pattern;
+        }
+
+
+        function numberPyramid() {
+
+            var pattern = "";
+
+            for (var row = 1; row <= 5; row++) {
+
+                for (var column = 1; column <= row; column++) {
+                    pattern += column + " ";
+                }
+
+                pattern += "\n";
+            }
+
+            document.getElementById("result5").innerText = pattern;
+        }
+
+
+        function diamondPattern() {
+
+            var pattern = "";
+
+            for (var row = 1; row <= 5; row++) {
+
+                for (var space = 1; space <= 5 - row; space++) {
+                    pattern += " ";
+                }
+
+                for (var column = 1; column <= (2 * row - 1); column++) {
+                    pattern += "*";
+                }
+
+                pattern += "\n";
+            }
+
+
+            for (var row = 4; row >= 1; row--) {
+
+                for (var space = 1; space <= 5 - row; space++) {
+                    pattern += " ";
+                }
+
+                for (var column = 1; column <= (2 * row - 1); column++) {
+                    pattern += "*";
+                }
+
+                pattern += "\n";
+            }
+
+            document.getElementById("result6").innerText = pattern;
+        }
+
+
+        function floydTriangle() {
+
+            var pattern = "";
+            var number = 1;
+
+            for (var row = 1; row <= 5; row++) {
+
+                for (var column = 1; column <= row; column++) {
+
+                    pattern += number + " ";
+                    number++;
+                }
+
+                pattern += "\n";
+            }
+
+            document.getElementById("result7").innerText = pattern;
+        }
+
+
+        function pascalTriangle() {
+
+            var pattern = "";
+
+            for (var row = 0; row < 5; row++) {
+
+                var value = 1;
+
+                for (var space = 0; space < 5 - row; space++) {
+                    pattern += " ";
+                }
+
+                for (var column = 0; column <= row; column++) {
+
+                    pattern += value + " ";
+
+                    value = value * (row - column) / (column + 1);
+                }
+
+                pattern += "\n";
+            }
+
+            document.getElementById("result8").innerText = pattern;
+        }
+
+    </script>
+
+</body>
+</html>
+```

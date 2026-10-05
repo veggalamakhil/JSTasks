@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            padding: 30px;
+        }
+
+        .card {
+            width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border: 1px solid #90caf9;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px #b0bec5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1565c0;
+            margin-bottom: 25px;
+        }
+
+        .details {
+            background-color: #f5f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #1976d2;
+        }
+
+        p {
+            font-size: 17px;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .value {
+            color: #1565c0;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Welcome to JavaScript</h1>
+
+        <div class="details">
+
+            <p>
+                My Name:
+                <span class="value" id="name"></span>
+            </p>
+
+            <p>
+                My Age:
+                <span class="value" id="age"></span>
+            </p>
+
+            <p>
+                My Salary:
+                <span class="value" id="salary"></span>
+            </p>
+
+            <p>
+                My Gender:
+                <span class="value" id="gender"></span>
+            </p>
+
+            <p>
+                Married Status:
+                <span class="value" id="married"></span>
+            </p>
+
+            <p>
+                Account Number:
+                <span class="value" id="account"></span>
+            </p>
+
+        </div>
+
+        <div class="footer">
+            JavaScript Variables Example
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var name = "Kiran";
+        var age = 21;
+        var salary = 900000000;
+        var gender = "Male";
+        var isMarried = false;
+        var accNo = 34422184474783837n;
+
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("age").innerHTML = age;
+        document.getElementById("salary").innerHTML = salary;
+        document.getElementById("gender").innerHTML = gender;
+        document.getElementById("married").innerHTML = isMarried;
+        document.getElementById("account").innerHTML = accNo;
+
+        console.log("Check me in console: Welcome to J.S");
+        console.log("My salary is", salary);
+        console.log("My married status is", isMarried);
+        console.log("Account number is", accNo);
+
+    </script>
+
+</body>
+
+</html>
